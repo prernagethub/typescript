@@ -101,3 +101,46 @@ console.log(Color.Greeen);
 console.log(Color1.Greeen);
 console.log(Color2.Greeen);
 
+//unknown.............
+
+let notSure:unknown = "a";
+
+if(typeof(notSure) === "number"){
+  notSure.toFixed(2)
+} else if(typeof(notSure) === "string"){
+  notSure.length;
+}
+
+//never................
+
+function throwError(message: string): never{
+  throw new Error(message) 
+}
+
+//void.................
+
+function logMessage(message:string): void{
+  console.log(message);
+  
+}
+
+//type infrence...........
+
+let username = "mani"    //ts infers the type as string
+
+//type aasertions.........
+
+let someValue:any = "hello world"
+// let strLength: number = someValue.length 
+let strLength: number = (someValue as string).length
+console.log(strLength);
+
+
+//union type..................
+let id: string | number;
+id = "abc"
+id = 12
+
+
+//type narrowing..............
+//type aliasName...
